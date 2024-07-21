@@ -32,7 +32,7 @@ data += cmd
 headers = {
     "Content-Type": "application/x-www-form-urlencoded"
 }
-
+     
 print(f"Data: {data}")
 
 try:
