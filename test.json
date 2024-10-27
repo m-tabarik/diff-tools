@@ -1,14 +1,25 @@
-openapi: 3.0.0
-info:
-  title: Foo API
-  version: 1.0.0
-servers:
-  - url: "https://jumpy-floor.surge.sh"
-paths:
-  /test:
-    get:
-      summary: Test endpoint
-      responses:
-        '200':
-          description: Successful response
-components: {}
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Foo API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://jumpy-floor.surge.sh"
+    }
+  ],
+  "paths": {
+    "/test": {
+      "get": {
+        "summary": "Test endpoint",
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    }
+  },
+  "components": {}
+}
