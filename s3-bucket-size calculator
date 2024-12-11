@@ -1,0 +1,8 @@
+#!/bin/bash
+buckets=$(aws s3 ls | awk '{print $3}')
+
+for bucket in $buckets; do
+  echo "Calculating size for bucket: $bucket"
+  size=$(aws s3api list-objects --bucket "$bucket" --query "sum(Contents[].Size)" --output text)
+  echo "Bucket: $bucket - Size: $((size / 1024 / 1024)) MB"
+done
