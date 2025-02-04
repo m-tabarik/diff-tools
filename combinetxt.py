@@ -9,3 +9,4 @@ with open(output_file, 'w') as outfile:
         if filename.endswith('.txt'):
             with open(os.path.join(current_directory, filename), 'r') as infile:
                 outfile.write(infile.read() + '\n')
+   
